@@ -1,6 +1,6 @@
 {% set name = "pympler" %}
-{% set version = "0.6" %}
-{% set sha256 = "e22d2d1555739d2d46b2e51f941fa4e6c5142fbe73bd04132665e595b05cab7b" %}
+{% set version = "0.7" %}
+{% set sha256 = "e8f8d3d2bada9a64948adfa118eca29222af2546a28ba480c13bce21aae8a984" %}
 
 package:
   name: {{ name|lower }}
