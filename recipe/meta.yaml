@@ -1,6 +1,6 @@
 {% set name = "pympler" %}
-{% set version = "0.7" %}
-{% set sha256 = "e8f8d3d2bada9a64948adfa118eca29222af2546a28ba480c13bce21aae8a984" %}
+{% set version = "0.8" %}
+{% set sha256 = "e53e8b6ce632900f3eb3bb3c7b751386cec0084843a30085482c628492de2adc" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
