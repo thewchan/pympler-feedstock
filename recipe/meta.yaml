@@ -1,6 +1,6 @@
 {% set name = "pympler" %}
-{% set version = "0.8" %}
-{% set sha256 = "e53e8b6ce632900f3eb3bb3c7b751386cec0084843a30085482c628492de2adc" %}
+{% set version = "0.9" %}
+{% set sha256 = "6a10c1658805726d9e7a2d08e6ffc956e7082dfbce8abcd33b111dd382f87a5b" %}
 
 package:
   name: {{ name|lower }}
@@ -36,8 +36,7 @@ about:
   license: Apache-2
   license_family: Apache
   license_file: LICENSE
-  summary: 'Development tool to measure, monitor and analyze the memory
-  behavior of Python objects in a running Python application. '
+  summary: 'Development tool to measure, monitor and analyze the memory behavior of Python objects in a running Python application. '
   description: |
     A development tool to measure, monitor and analyze the memory
     behavior of Python objects.
