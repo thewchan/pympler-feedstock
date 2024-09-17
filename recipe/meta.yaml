@@ -1,16 +1,13 @@
 {% set name = "pympler" %}
-{% set version = "0.9" %}
-{% set sha256 = "6a10c1658805726d9e7a2d08e6ffc956e7082dfbce8abcd33b111dd382f87a5b" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
-#  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Pympler-{{ version }}.tar.gz
+  sha256: 993f1a3599ca3f4fcd7160c7545ad06310c9e12f70174ae7ae8d4e25f6c5d3fa
 
 build:
   noarch: python
@@ -20,29 +17,27 @@ build:
 requirements:
   host:
     - pip
-    - python
-    - setuptools
+    - python >=3.6
   run:
-    - python
+    - python >=3.6
 
 test:
-  source_files:
-    - test/*
+  imports:
+    - pympler
   commands:
-    - python test/runtest.py
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/pympler/pympler
-  license: Apache-2
-  license_family: Apache
-  license_file: LICENSE
-  summary: 'Development tool to measure, monitor and analyze the memory behavior of Python objects in a running Python application. '
-  description: |
-    A development tool to measure, monitor and analyze the memory
-    behavior of Python objects.
   doc_url: http://pythonhosted.org/Pympler/
-  dev_url: https://github.com/pympler/pympler
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: Development tool to measure, monitor and analyze the memory behavior of Python objects in a running Python application.
+
 
 extra:
   recipe-maintainers:
     - CJ-Wright
+    - thewchan
